@@ -141,7 +141,7 @@ id<MTLTexture> MVKBufferView::getMTLTexture() {
                                                                                           mipmapped: NO];
 		
 		// Linear texture that shares storage with buffer must have matching storageMode with buffer
-		mtlTexDesc.storageMode = _buffer->getMtlBuffer().storageMode;
+		mtlTexDesc.storageMode = _buffer->getMTLBuffer().storageMode;
 
 		_mtlTexture = [_buffer->getMTLBuffer() newTextureWithDescriptor: mtlTexDesc
 																 offset: _mtlBufferOffset
